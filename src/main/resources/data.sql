@@ -1,12 +1,21 @@
-INSERT INTO student VALUES(1, 'Mary', 'Smith');
-INSERT INTO student VALUES(2, 'Jose', 'Rodriguez');
+INSERT INTO student (firstName, lastName) VALUES('Mary', 'Smith');
+INSERT INTO student (firstName, lastName) VALUES('Jose', 'Rodriguez');
 
-INSERT INTO subject VALUES(1, 'Classics');
-INSERT INTO subject VALUES(2, 'Math');
-INSERT INTO subject VALUES(3, 'English');
-INSERT INTO subject VALUES(4, 'Spanish');
-INSERT INTO subject VALUES(5, 'Databases');
+INSERT INTO subject (subjectName) VALUES('Classics');
+INSERT INTO subject (subjectName) VALUES('Math');
+INSERT INTO subject (subjectName) VALUES('English');
+INSERT INTO subject (subjectName) VALUES('Spanish');
+INSERT INTO subject (subjectName) VALUES('Databases');
 
-INSERT INTO faculty VALUES(1, 'Humanities');
-INSERT INTO faculty VALUES(2, 'Math');
-INSERT INTO faculty VALUES(3, 'Engineering');
+INSERT INTO grade (result) VALUES('A');
+INSERT INTO grade (result) VALUES('B');
+INSERT INTO grade (result) VALUES('C');
+INSERT INTO grade (result) VALUES('D');
+INSERT INTO grade (result) VALUES('E');
+INSERT INTO grade (result) VALUES('F');
+
+INSERT INTO studenttakessubject (studentID, subjectID) VALUES (1, 2);
+INSERT INTO studenttakessubject (studentID, subjectID, gradeID) VALUES (1, 5, 2);
+INSERT INTO studenttakessubject (studentID, subjectID) VALUES (2, 1);
+INSERT INTO studenttakessubject (studentID, subjectID) VALUES (2, 3);
+INSERT INTO studenttakessubject (studentID, subjectID, gradeID) VALUES (2, 4, 1);

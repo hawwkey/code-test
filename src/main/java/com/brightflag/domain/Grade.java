@@ -1,29 +1,29 @@
 package com.brightflag.domain;
 
 public class Grade {
-	//TODO
-	private Integer examID;
-	private String examName;
 
-	public Integer getExamID() {
-		return examID;
+	private Integer gradeID;
+	private String result;
+
+	public Integer getGradeID() {
+		return gradeID;
 	}
 
-	public void setExamID(Integer examID) {
-		this.examID = examID;
+	public void setGradeID(Integer gradeID) {
+		this.gradeID = gradeID;
 	}
 
-	public String getExamName() {
-		return examName;
+	public String getResult() {
+		return result;
 	}
 
-	public void setExamName(String examName) {
-		this.examName = examName;
+	public void setResult(String result) {
+		this.result = result;
 	}
 
 	@Override
 	public String toString() {
-		return "Grade [examID=" + examID + ", examName=" + examName + "]";
+		return "Grade"+result;
 	}
 
 }

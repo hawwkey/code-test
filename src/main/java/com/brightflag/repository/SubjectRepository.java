@@ -16,7 +16,7 @@ public class SubjectRepository {
     JdbcTemplate jdbcTemplate;
 
     public List<Subject> getSubjects() {
-        return jdbcTemplate.query("SELECT subjectID, subjectName, FROM subject;",
+        return jdbcTemplate.query("SELECT subjectID, subjectName FROM subject;",
                 new BeanPropertyRowMapper<Subject>(Subject.class));
     }
 }

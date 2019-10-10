@@ -17,7 +17,6 @@ public class SubjectAPIController {
 
 	@RequestMapping("api/getSubjects")
 	public List<Subject> getSubjects() {
-		// TODO populate students subjects list
 		return subjectService.getSubjects();
 	}
 

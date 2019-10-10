@@ -11,16 +11,27 @@ create table subject (
    primary key(subjectID)
 );
 
-create table faculty (
-   facultyID integer auto_increment not null,
-   facultyName varchar(255) not null,
-   primary key(facultyID)
+create table grade (
+    gradeID integer auto_increment not null,
+    result enum ('A', 'B', 'C', 'D', 'E', 'F')
 );
 
 create table studenttakessubject (
+    recordID integer auto_increment not null,
     studentID integer not null,
     subjectID integer not null,
-    primary key (studentID, subjectID),
-    foreign key (studentID) references student(studentID),
+    gradeID integer,
+    primary key (recordID),
+    foreign key (studentID) references student(studentID)
+    on delete cascade
+    on update cascade ,
     foreign key (subjectID) references subject(subjectID)
+    on delete cascade
+    on update cascade,
+    foreign key (gradeID) references grade(gradeID)
+    on delete cascade
+    on update cascade
 );
+
+
+

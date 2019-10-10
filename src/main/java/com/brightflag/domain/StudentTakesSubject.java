@@ -1,22 +1,38 @@
 package com.brightflag.domain;
 
 public class StudentTakesSubject {
-    private String studentID, subjectID;
+    private int recordID, studentID, subjectID, gradeID;
 
-    public String getStudentID() {
-        return studentID;
+    public void setRecordID(int recordID) {
+        this.recordID = recordID;
     }
 
-    public void setStudentID(String studentID) {
+    public int getRecordID() {
+        return recordID;
+    }
+
+    public void setStudentID(int studentID) {
         this.studentID = studentID;
     }
 
-    public String getSubjectID() {
+    public int getStudentID() {
+        return studentID;
+    }
+
+    public void setSubjectID(int subjectID) {
+        this.subjectID = subjectID;
+    }
+
+    public int getSubjectID() {
         return subjectID;
     }
 
-    public void setSubjectID(String subjectID) {
-        this.subjectID = subjectID;
+    public void setGradeID(int gradeID) {
+        this.gradeID = gradeID;
+    }
+
+    public int getGradeID() {
+        return gradeID;
     }
 
     @Override

@@ -16,7 +16,6 @@ public class GradeAPIController {
 
     @RequestMapping("api/getGrades")
     public List<Grade> getGrades() {
-        // TODO populate students subjects list
         return gradeService.getGrades();
     }
 }

@@ -11,13 +11,12 @@ import com.brightflag.domain.Grade;
 
 @Repository
 public class GradeRepository {
-    //TODO
+
     @Autowired
     JdbcTemplate jdbcTemplate;
 
     public List<Grade> getGrades() {
-        //TODO
-        return jdbcTemplate.query("SELECT examID, examName FROM exam;",
+        return jdbcTemplate.query("SELECT gradeID, result FROM grade;",
                 new BeanPropertyRowMapper<Grade>(Grade.class));
     }
 }

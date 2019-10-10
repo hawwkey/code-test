@@ -2,44 +2,52 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Brightflag Code Test</title>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	crossorigin="anonymous">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
-<script src="js/main.js"></script>
+    <title>Brightflag Code Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+    <script src="js/main.js"></script>
 
 </head>
 <body ng-app="bfCodeTest">
-
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">BF Code Test</a>
-	</nav>
-
-	<div ng-controller="studentCtrl" class="container">
-
-		<table class="table">
-			<tr>
-				<th>Student ID</th>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Subjects</th>
-			</tr>
-			<tr ng-repeat="student in students">
-				<td>{{student.studentID}}</td>
-				<td>{{student.firstName}}</td>
-				<td>{{student.lastName}}</td>
-				<td></td>
-			</tr>
-		</table>
-
-	</div>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="navbar-brand" href="#">BF Code Test</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#!students">Students</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#!subjects">Subjects</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                Additional tables
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#!grades">Grades info</a>
+                <a class="dropdown-item" href="#!enrollment">Subjects enrollment info</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<div id="wer" ng-view></div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 </html>
