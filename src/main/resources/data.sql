@@ -14,8 +14,8 @@ INSERT INTO grade (result) VALUES('D');
 INSERT INTO grade (result) VALUES('E');
 INSERT INTO grade (result) VALUES('F');
 
-INSERT INTO studenttakessubject (studentID, subjectID) VALUES (1, 2);
-INSERT INTO studenttakessubject (studentID, subjectID, gradeID) VALUES (1, 5, 2);
-INSERT INTO studenttakessubject (studentID, subjectID) VALUES (2, 1);
-INSERT INTO studenttakessubject (studentID, subjectID) VALUES (2, 3);
-INSERT INTO studenttakessubject (studentID, subjectID, gradeID) VALUES (2, 4, 1);
+INSERT INTO enrollment (studentID, subjectID) VALUES (1, 2);
+INSERT INTO enrollment (studentID, subjectID, gradeID) VALUES (1, 5, 2);
+INSERT INTO enrollment (studentID, subjectID) VALUES (2, 1);
+INSERT INTO enrollment (studentID, subjectID) VALUES (2, 3);
+INSERT INTO enrollment (studentID, subjectID, gradeID) VALUES (2, 4, 1);

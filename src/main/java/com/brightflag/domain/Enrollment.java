@@ -1,6 +1,6 @@
 package com.brightflag.domain;
 
-public class StudentTakesSubject {
+public class Enrollment {
     private int recordID, studentID, subjectID, gradeID;
 
     public void setRecordID(int recordID) {

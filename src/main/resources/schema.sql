@@ -13,10 +13,11 @@ create table subject (
 
 create table grade (
     gradeID integer auto_increment not null,
-    result enum ('A', 'B', 'C', 'D', 'E', 'F')
+    result enum ('A', 'B', 'C', 'D', 'E', 'F'),
+    primary key (gradeID)
 );
 
-create table studenttakessubject (
+create table enrollment (
     recordID integer auto_increment not null,
     studentID integer not null,
     subjectID integer not null,

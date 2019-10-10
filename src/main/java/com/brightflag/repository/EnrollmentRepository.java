@@ -7,16 +7,16 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.brightflag.domain.StudentTakesSubject;
+import com.brightflag.domain.Enrollment;
 
 @Repository
-public class StudentTakesSubjectRepository {
+public class EnrollmentRepository {
 
         @Autowired
         JdbcTemplate jdbcTemplate;
 
-        public List<StudentTakesSubject> getStudentsandSubjects() {
-            return jdbcTemplate.query("SELECT studentID, subjectID FROM studenttakessubject;",
-                    new BeanPropertyRowMapper<StudentTakesSubject>(StudentTakesSubject.class));
+        public List<Enrollment> getEnrollments() {
+            return jdbcTemplate.query("SELECT recordID, studentID, subjectID, gradeID FROM enrollment;",
+                    new BeanPropertyRowMapper<Enrollment>(Enrollment.class));
         }
 }
