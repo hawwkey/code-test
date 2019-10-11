@@ -36,8 +36,8 @@ public class Enrollment {
     }
 
     @Override
-    public String toString(){
-        return "Student "+studentID+" takes subject "+subjectID;
+    public String toString() {
+        return "Enrollment [enrollmentID=" + recordID + ", studentID=" + studentID + ", subjectID=" + subjectID + ", gradeID=" + gradeID + "]";
     }
 
 }

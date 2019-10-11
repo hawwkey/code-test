@@ -23,7 +23,7 @@ public class Grade {
 
 	@Override
 	public String toString() {
-		return "Grade"+result;
+		return "Grade [gradeID=+"+gradeID+", result="+result+"]";
 	}
 
 }
