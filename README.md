@@ -1,4 +1,4 @@
-# Brightflag Code Test - Getting Started & Questions
+# Code Test - Getting Started & Questions
 
 ### Running the application
 1. Run src/main/com/brightflag/codetest/Application.java as a Spring Boot app
